@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="MVC">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch27/MVC/spheredemo.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ch27/MVC/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

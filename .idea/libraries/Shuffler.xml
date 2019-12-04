@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Shuffler">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch11/Shuffler/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch11/Shuffler/shuffler.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="puzzle">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch16/Puzzle/puzzle.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

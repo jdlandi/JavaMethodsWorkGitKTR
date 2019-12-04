@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Messenger">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch24/Messenger/messenger.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ch24/Messenger/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch24/Messenger/MessengerDocs.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

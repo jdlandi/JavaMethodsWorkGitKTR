@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Teletext">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch21/Teletext/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch21/Teletext/teletext.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

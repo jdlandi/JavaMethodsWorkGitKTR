@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="BalloonDraw">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch04/BalloonDraw/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch04/BalloonDraw/balloondraw.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

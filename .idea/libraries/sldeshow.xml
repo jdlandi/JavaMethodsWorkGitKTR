@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="sldeshow">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch18/SlideShow/sldeshow.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

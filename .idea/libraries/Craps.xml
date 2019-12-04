@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Craps">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch06/Craps/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch06/Craps/craps.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

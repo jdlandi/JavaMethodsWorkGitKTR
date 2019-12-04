@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="keypad">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch17/Exercises/keypad.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

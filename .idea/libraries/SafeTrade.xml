@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="SafeTrade">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch20/SafeTrade/safetrade.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ch20/SafeTrade/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch20/SafeTrade/SafeTradeDocs.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

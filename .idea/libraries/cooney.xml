@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="cooney">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch08/Exercises/cooney.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

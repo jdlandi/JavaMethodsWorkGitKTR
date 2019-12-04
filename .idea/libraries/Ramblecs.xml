@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Ramblecs">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch17/Ramblecs/ramblecs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/Ch17/Ramblecs/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

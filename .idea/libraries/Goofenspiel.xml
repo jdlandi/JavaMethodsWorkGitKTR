@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Goofenspiel">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/Ch27/Goofenspiel/deck.zip!/" />
+      <root url="jar://$PROJECT_DIR$/Ch27/Goofenspiel/goofenspiel.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
