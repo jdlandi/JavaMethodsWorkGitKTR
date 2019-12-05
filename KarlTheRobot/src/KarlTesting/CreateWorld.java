@@ -7,6 +7,6 @@ public class CreateWorld {
         World.setSize(10, 10);
         World.setVisible(true);
         new WorldBuilder(true);
-        
+
     }
 }
