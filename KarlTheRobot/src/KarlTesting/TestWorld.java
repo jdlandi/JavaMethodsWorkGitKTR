@@ -1,15 +1,15 @@
 package KarlTesting;
 import kareltherobot.*;
 public class TestWorld {
-    public static class myBot extends UrRobot {
-        public myBot(int street, int avenue, Direction direction, int beepers) {
+    private static class myBot extends UrRobot {
+        private myBot(int street, int avenue, Direction direction, int beepers) {
             super(street, avenue, direction, beepers);
         }
 
-        public void turnRight() {
-            super.turnLeft();
-            super.turnLeft();
-            super.turnLeft();
+        private void turnRight() {
+            turnLeft();
+            turnLeft();
+            turnLeft();
         }
     }
     public static void main
