@@ -1,6 +1,17 @@
 package KarlTesting;
 import kareltherobot.*;
 public class TestWorld {
+    public static class myBot extends UrRobot {
+        public myBot(int street, int avenue, Direction direction, int beepers) {
+            super(street, avenue, direction, beepers);
+        }
+
+        public void turnRight() {
+            super.turnLeft();
+            super.turnLeft();
+            super.turnLeft();
+        }
+    }
     public static void main
             (String[] args)
     {
@@ -16,6 +27,9 @@ public class TestWorld {
         amy.move(); amy.move();
         amy.turnLeft(); amy.putBeeper();
         amy.move(); // amy.pickBeeper();
+        myBot ken = new myBot(5,2,Directions.East,2);
+        ken.turnRight();
+
     }
 }
 // SAVE: "world1.txt"
