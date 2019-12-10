@@ -1,17 +1,8 @@
 package KarlTesting;
 import kareltherobot.*;
-public class TestWorld {
-    private static class myBot extends UrRobot {
-        private myBot(int street, int avenue, Direction direction, int beepers) {
-            super(street, avenue, direction, beepers);
-        }
+import KarlTesting.myBot.*;
 
-        private void turnRight() {
-            turnLeft();
-            turnLeft();
-            turnLeft();
-        }
-    }
+public class TestWorld {
     public static void main
             (String[] args)
     {
@@ -19,16 +10,12 @@ public class TestWorld {
         World.readWorld("world1.txt");
         World.setVisible(true);
         //new WorldBuilder(true);
-        UrRobot amy
+        myBot amy
                 = new
-                UrRobot(5,2,
+                myBot(5,2,
                 Directions.East,
                 3);
-        amy.move(); amy.move();
-        amy.turnLeft(); amy.putBeeper();
-        amy.move(); // amy.pickBeeper();
-        myBot ken = new myBot(5,2,Directions.East,2);
-        ken.turnRight();
+        amy.nDir(Directions.West);
 
     }
 }
