@@ -30,6 +30,7 @@
       <module fileurl="file://$PROJECT_DIR$/Ch17/Exercises/Exercises1.iml" filepath="$PROJECT_DIR$/Ch17/Exercises/Exercises1.iml" />
       <module fileurl="file://$PROJECT_DIR$/KarlTheRobot/KarlTheRobot.iml" filepath="$PROJECT_DIR$/KarlTheRobot/KarlTheRobot.iml" />
       <module fileurl="file://$PROJECT_DIR$/StudentFiles.iml" filepath="$PROJECT_DIR$/StudentFiles.iml" />
+      <module fileurl="file://$PROJECT_DIR$/myStuff/myStuff.iml" filepath="$PROJECT_DIR$/myStuff/myStuff.iml" />
     </modules>
   </component>
 </project>

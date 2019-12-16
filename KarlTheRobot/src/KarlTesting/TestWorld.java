@@ -15,7 +15,7 @@ public class TestWorld {
                 myBot(5,2,
                 Directions.East,
                 3);
-        amy.nDir(Directions.West);
+
 
     }
 }
