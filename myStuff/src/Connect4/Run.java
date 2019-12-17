@@ -4,6 +4,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import Connect4.drawFunctions.*;
 
 // https://docs.oracle.com/javase/tutorial/uiswing/events/eventsandcomponents.html
 public class Run extends JPanel implements ActionListener {
@@ -13,8 +14,8 @@ public class Run extends JPanel implements ActionListener {
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g); // Paint the background
-        g.setColor(Color.BLACK);
-        g.fillRect(xPos,yPos,50,10);
+        Piece testP = new Piece(xPos,yPos,'X');
+        drawFunctions.drawPiece(g, testP);
     }
 
     // Called automatically when the timer "fires"
@@ -22,9 +23,8 @@ public class Run extends JPanel implements ActionListener {
     {
         // Adjust the horizontal position of the message:
         xPos++;  // subtract 1
-        if (xPos > 500)
-            xPos = 0;
-
+        if (xPos > 8)
+            xPos = 1;
         repaint();
     }
 
@@ -38,7 +38,7 @@ public class Run extends JPanel implements ActionListener {
 
         //  Create panel, a Banner object, which is a kind of JPanel:
         Run panel = new Run();
-        panel.setBackground(Color.CYAN);  // the default color is light gray
+        panel.setBackground(Color.WHITE);  // the default color is light gray
 
         // Add panel to window:
         Container c = window.getContentPane();
@@ -48,13 +48,13 @@ public class Run extends JPanel implements ActionListener {
         window.setVisible(true);
 
         // Set the initial position of the message:
-        panel.xPos = panel.getWidth();
-        panel.yPos = panel.getHeight() / 2;
+        panel.xPos = 1;
+        panel.yPos = 2;
 
         // Create a Timer object that fires every 30 milliseconds;
         // attach it to panel so that panel "listens to" and
         // processes the timer events; start the timer:
-        Timer clock = new Timer(30, panel);
+        Timer clock = new Timer(500, panel);
         clock.start();
     }
 }
