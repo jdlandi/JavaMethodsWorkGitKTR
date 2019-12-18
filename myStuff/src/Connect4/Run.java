@@ -1,45 +1,38 @@
 package Connect4;
+import java.awt.event.*;
 import java.util.Arrays;
 import javax.swing.*;
 import javax.swing.event.MouseInputAdapter;
 import javax.swing.event.MouseInputListener;
 import java.awt.*;
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.lang.Math;
 
 import Connect4.drawFunctions.*;
 import Connect4.Board.*;
 
 // https://docs.oracle.com/javase/tutorial/uiswing/events/eventsandcomponents.html
-public class Run extends JPanel implements ActionListener, MouseInputListener {
+public class Run extends JPanel implements ActionListener, MouseInputListener, KeyListener {
+    int gameState = 0; // -1: Quit, 0: Start, 1:Click, 2: Anim, 3: Win
     Board cBoard = new Board();
     char cTeam = 'X';
     int[] mousePos;
     boolean mouseIn = false;
-    private int xPos, yPos,xPos2,yPos2;  // hold the coordinates of the message
+    boolean isKeyPressed = false;
+    private int xPos, yPos,xPos2,yPos2;
 
-    // Called automatically after a repaint request
     public void paintComponent(Graphics g)
     {
-        Piece one = new Piece(xPos,yPos,'X');
-        Piece two = new Piece(xPos2, yPos2, 'O');
-        cBoard.addPiece(two);
-        cBoard.addPiece(one);
         super.paintComponent(g); // Paint the background
-        drawFunctions.drawPieces(g, cBoard.set);
-        if (mouseIn) {
-            drawFunctions.hoverPiece(g,mousePos[0],mousePos[1],cTeam);
+        switch (gameState) {
+            case 0: drawFunctions.waitForStart(g, mousePos,isKeyPressed); break;
+            case 1: drawFunctions.waitForClick(g,cBoard,mouseIn,mousePos,cTeam); break;
         }
     }
 
     // Called automatically when the timer "fires"
     public void actionPerformed(ActionEvent e)
     {
-        // Adjust the horizontal position of the message:
-        yPos++;  // subtract 1
+        yPos++;
         xPos2 ++;
         if (yPos > 6)
             yPos = 1;
@@ -62,11 +55,15 @@ public class Run extends JPanel implements ActionListener, MouseInputListener {
 
         // Add panel to window:
         Container c = window.getContentPane();
-        c.add(panel); c.addMouseListener(panel); c.addMouseMotionListener(panel);
+        c.add(panel); c.addMouseListener(panel);
+        c.addMouseMotionListener(panel);
+        c.addKeyListener(panel);
 
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
+        window.isFocusable();
 
+        c.requestFocusInWindow();
         // Set the initial position of the message:
         panel.xPos = 1;
         panel.yPos = 1;
@@ -113,6 +110,24 @@ public class Run extends JPanel implements ActionListener, MouseInputListener {
     public void mouseMoved(MouseEvent e) {
         mouseIn = true;
         mousePos = new int[]{Math.round(e.getX() / 100) + 1 ,6 - Math.round(e.getY() / 100)};
-        System.out.println(Arrays.toString(mousePos));
+    }
+
+    @Override
+    public void keyTyped(KeyEvent e) {
+
+    }
+
+    @Override
+    public void keyPressed(KeyEvent e) {
+        isKeyPressed = true;
+    }
+
+    @Override
+    public void keyReleased(KeyEvent e) {
+        switch (gameState) {
+            case 0: switch (e.getKeyChar()) {
+                case ' ': gameState = 1;
+            }
+        }
     }
 }
