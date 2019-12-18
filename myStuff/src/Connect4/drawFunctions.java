@@ -23,4 +23,7 @@ public class drawFunctions extends JPanel {
             drawPiece(g, curr);
         }
     }
+    public static void hoverPiece(Graphics g, int x, int y, char cTeam) {
+        drawPiece(g, new Piece(x,y,cTeam));
+    }
 }
