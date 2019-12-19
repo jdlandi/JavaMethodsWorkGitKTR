@@ -28,4 +28,8 @@ public class Board {
             }
         }
     }
+
+    public static boolean isValidMove(Piece piece) {
+
+    }
 }

@@ -14,7 +14,7 @@ import Connect4.Board.*;
 public class Run extends JPanel implements ActionListener, MouseInputListener, KeyListener {
     int gameState = 0; // -1: Quit, 0: Start, 1:Click, 2: Anim, 3: Win
     Board cBoard = new Board();
-    char cTeam = 'X';
+    char cTeam = 'O';
     int[] mousePos;
     boolean mouseIn = false;
     boolean isKeyPressed = false;
@@ -86,8 +86,6 @@ public class Run extends JPanel implements ActionListener, MouseInputListener, K
     @Override
     public void mousePressed(MouseEvent e) {
         mouseIn = true;
-        mousePos = new int[]{e.getX(),e.getY()};
-        System.out.println(Arrays.toString(mousePos));
     }
 
     @Override
@@ -125,11 +123,12 @@ public class Run extends JPanel implements ActionListener, MouseInputListener, K
 
     @Override
     public void keyReleased(KeyEvent e) {
+        isKeyPressed = false;
         switch (gameState) {
             case 0: switch (e.getKeyChar()) {
                 case ' ': gameState = 1;
             }
         }
-        isKeyPressed = false;
+
     }
 }
