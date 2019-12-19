@@ -18,13 +18,15 @@ public class Run extends JPanel implements ActionListener, MouseInputListener, K
     int[] mousePos;
     boolean mouseIn = false;
     boolean isKeyPressed = false;
+    boolean isHoverStart = false; // Start button beginning
+    boolean isHoverExit = false;
     private int xPos, yPos,xPos2,yPos2;
 
     public void paintComponent(Graphics g)
     {
         super.paintComponent(g); // Paint the background
         switch (gameState) {
-            case 0: drawFunctions.waitForStart(g, mousePos,isKeyPressed); break;
+            case 0: drawFunctions.waitForStart(g, mousePos,isKeyPressed,isHoverStart, isHoverExit); break;
             case 1: drawFunctions.waitForClick(g,cBoard,mouseIn,mousePos,cTeam); break;
         }
     }
@@ -108,7 +110,6 @@ public class Run extends JPanel implements ActionListener, MouseInputListener, K
 
     @Override
     public void mouseMoved(MouseEvent e) {
-        mouseIn = true;
         mousePos = new int[]{Math.round(e.getX() / 100) + 1 ,6 - Math.round(e.getY() / 100)};
     }
 
@@ -129,5 +130,6 @@ public class Run extends JPanel implements ActionListener, MouseInputListener, K
                 case ' ': gameState = 1;
             }
         }
+        isKeyPressed = false;
     }
 }
