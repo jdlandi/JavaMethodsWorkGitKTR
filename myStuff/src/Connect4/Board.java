@@ -29,7 +29,15 @@ public class Board {
         }
     }
 
-    public static boolean isValidMove(Piece piece) {
-
+    public boolean isValidMove(Piece piece) {
+        int xPiece = piece.x;
+        for (int i = 1; i <= 6; i ++ ) {
+            for (int j = 1; j <= 7; j ++) {
+                if (set[((j - 1) + ((i - 1) * 7))].y == xPiece) {
+                    return true;
+                };
+            }
+        }
+        return false;
     }
 }
