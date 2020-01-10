@@ -6,6 +6,6 @@ public class RunGame {
 
     public static void main(String[] args) {
         Board lol = new Board(5,5,10,seed);
-        System.out.println(Arrays.toString(lol.cells));
+        DrawGame.main(new String[]{"lol", "boomer"}, new int[][]{{3,5},{4,5},{2,5}});
     }
 }

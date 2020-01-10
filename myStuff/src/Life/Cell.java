@@ -12,4 +12,30 @@ public class Cell {
         pos = new int[]{a,b};
         state = c;
     }
+
+    public void die() {
+        state = false;
+    }
+
+    public void live() {
+        state = true;
+    }
+
+    public void tick(int neighbors) {
+        if (state) {
+            if (neighbors < 2) {
+                die();
+            } else if (neighbors < 4) {
+                live();
+            } else {
+                die();
+            }
+        } else {
+            if (neighbors == 3) {
+                live();
+            } else {
+                die();
+            }
+        }
+    }
 }
